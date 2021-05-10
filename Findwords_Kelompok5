@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+const int kolom = 16, baris = 15;
+
+ char words[rows][cols] = {"tgbwwinterwsesn",
+                           "aaunttmmhfoodnb",
+                           "jlwcqldzmpmvdmr",
+                           "asagmquwvvbsohi",
+                           "bwplotanadtpgnc",
+                           "rewngodjcpnatnk",
+                           "eeotwosbqharrsa",
+                           "azcgeswewnaknpb",
+                           "dinnerqodlwdcar",
+                           "onopkwmparktzcc",
+                           "qbfrogmamwpweey",
+                           "lqzqnnmrzjjsclg",
+                           "mosgzczetdbooto",
+                           "pdcrzmsngrdnrpz",
+                           "ohnkzwaterjgtra"};
+
+char *getWordVertical(int);
+char *reverse(char *);
+bool cariVertikal(char *);
+bool cariHorizontal(char *);
+
+int main()
+{
+    char kata[16];
+    int n;
+    cin>>n;
+    for (int i=0;i<n;i++){
+        cin.getline(kata,16,'\n');
+        if (cariVertikal(kata) || cariHorizontal(kata))
+            cout << "Ada"<< endl;
+        else 
+            cout << "Tidak Ada"<< endl;
+        }
+    return 0;
+}
